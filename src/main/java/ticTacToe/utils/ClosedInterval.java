@@ -3,7 +3,6 @@ package ticTacToe.utils;
 public class ClosedInterval {
 
 	private int min;
-
 	private int max;
 
 	public ClosedInterval(int min, int max) {

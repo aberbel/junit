@@ -3,11 +3,9 @@ package ticTacToe.utils;
 public class Coordinate {
 
 	private int row;
-	
 	private int column;
 	
 	public Coordinate(){
-		
 	}
 	
 	public Coordinate (int row, int column){
@@ -87,7 +85,5 @@ public class Coordinate {
 	public String toString() {
 		return "("+ row + ", " + column + ")";
 	}
-	
-	
 	
 }
