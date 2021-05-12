@@ -23,7 +23,7 @@ public class DecisionTreeBoardTest {
 		board.put(new Coordinate(2,1), Color.OS);
 		board.put(new Coordinate(1,1), Color.XS);
 		board.put(new Coordinate(2,2), Color.OS);
-		board.writeFile("pruebaEscritura");	
+		board.writeFile("pruebaEscritura2");	
 		String[] expected = new String[] {
 				"0 2 2 ", 
 				"2 0 2 ", 
@@ -56,10 +56,11 @@ public class DecisionTreeBoardTest {
 		assertEquals(Color.NONE, board.getColor(new Coordinate(0,1)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(0,2)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(1,0)));
-		assertEquals(Color.XS, board.getColor(new Coordinate(1,1)));
+		assertEquals(Color.NONE, board.getColor(new Coordinate(1,1)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(1,2)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(2,0)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(2,1)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(2,2)));
 	}
+
 }

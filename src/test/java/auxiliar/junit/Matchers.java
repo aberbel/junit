@@ -1,14 +1,11 @@
 package auxiliar.junit;
 
 interface BooleanExpresion {
-	
 	boolean eval();
 }
 
 class Not implements BooleanExpresion {
-	
 	private BooleanExpresion operand;
-	
 	private String operator;
 	
 	protected Not(BooleanExpresion operand){
@@ -28,11 +25,8 @@ class Not implements BooleanExpresion {
 }
 
 abstract class BinaryLogicalOperator implements BooleanExpresion {
-	
 	private BooleanExpresion left;
-	
 	private BooleanExpresion right;
-	
 	private String operator;
 	
 	protected BinaryLogicalOperator(String operator, BooleanExpresion left, BooleanExpresion right){
@@ -83,11 +77,8 @@ class Or extends BinaryLogicalOperator {
 }
 
 abstract class BinaryRelationalOperator implements BooleanExpresion {
-	
 	private int left;
-	
 	private int right;
-	
 	private String operator;
 	
 	protected BinaryRelationalOperator(String operator, int left, int right){
@@ -147,6 +138,7 @@ class LessThan extends BinaryRelationalOperator {
 	public boolean eval() {
 		return this.evalLeft() < this.evalRight();
 	}
+	
 }
 
 public class Matchers {

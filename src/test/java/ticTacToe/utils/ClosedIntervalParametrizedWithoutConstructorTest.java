@@ -14,13 +14,10 @@ import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
 public class ClosedIntervalParametrizedWithoutConstructorTest {
-
 	@Parameter(0) public int OUTMin;
 	@Parameter(1) public int OUTMax;
-
 	@Parameter(2) public int value;
 	@Parameter(3) public ClosedInterval closedInterval;
-
 	@Parameter(4) public int expectedLength;
 	@Parameter(5) public ClosedInterval expectedShiftedClosedInterval;
 	@Parameter(6) public boolean expectedIncludedValue;

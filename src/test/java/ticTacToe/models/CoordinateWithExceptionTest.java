@@ -32,7 +32,7 @@ public class CoordinateWithExceptionTest {
 	public void testCoordinateIntIntWithException() {
 		try {
 			OUTCoordinate = new Coordinate(-1, 3);
-			throw new Exception();
+			fail();
 		} catch (AssertionError e) {
 		} catch (Exception e) {
 			fail();
@@ -66,7 +66,7 @@ public class CoordinateWithExceptionTest {
 		try {
 			OUTCoordinate = new Coordinate(1, 2);
 			OUTCoordinate.setRow(-1);
-			throw new Exception();
+			fail();
 		} catch (AssertionError e) {
 		} catch (Exception e) {
 			fail();
@@ -90,7 +90,7 @@ public class CoordinateWithExceptionTest {
 		try {
 			OUTCoordinate = new Coordinate(1, 2);
 			OUTCoordinate.setColumn(3);
-			throw new Exception();
+			fail();
 		} catch (AssertionError e) {
 		} catch (Exception e) {
 			fail();

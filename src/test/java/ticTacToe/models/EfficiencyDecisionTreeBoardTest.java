@@ -16,23 +16,14 @@ import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
 public class EfficiencyDecisionTreeBoardTest {
-
 	@Parameter(0) public Board OUTBoard;
-	
 	@Parameter(1) public Color color;
-	
 	@Parameter(2) public boolean expectedExistTicTacToe;
-	
 	private static long startTime;
-	
 	private static long finishTime;
-	
 	private static long sum = 0;
-	
 	private static long items = 0;
-	
 	private static long max = Long.MIN_VALUE;
-	
 	private static long min = Long.MAX_VALUE;
 	
 	@Parameters

@@ -133,7 +133,7 @@ public class DecisionTreeBoard extends Board {
 	public void writeFile(String name) {
 		PrintWriter out = null;
 		try {
-			out = new PrintWriter(name + ".ttt");
+			out = new PrintWriter(".//src//test//resources//" + name + ".ttt");
 			for (int i = 0; i < colors.length; i++) {
 				for (int j = 0; j < colors[i].length; j++) {
 					out.print(colors[i][j].ordinal() + " ");

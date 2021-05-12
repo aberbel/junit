@@ -6,9 +6,7 @@ interface StaticBooleanExpresion {
 }
 
 class StaticNot implements StaticBooleanExpresion {
-	
 	private StaticBooleanExpresion operand;
-	
 	private String operator;
 	
 	protected StaticNot(StaticBooleanExpresion operand){
@@ -28,11 +26,8 @@ class StaticNot implements StaticBooleanExpresion {
 }
 
 abstract class StaticBinaryLogicalOperator implements StaticBooleanExpresion {
-	
 	private StaticBooleanExpresion left;
-	
 	private StaticBooleanExpresion right;
-	
 	private String operator;
 	
 	protected StaticBinaryLogicalOperator(String operator, StaticBooleanExpresion left, StaticBooleanExpresion right){
@@ -85,11 +80,8 @@ class StaticOr extends StaticBinaryLogicalOperator {
 }
 
 abstract class StaticBinaryRelationalOperator implements StaticBooleanExpresion {
-	
 	private int left;
-	
 	private int right;
-	
 	private String operator;
 	
 	protected StaticBinaryRelationalOperator(String operator, int left, int right){
@@ -185,4 +177,5 @@ public class StaticMatchers {
 				not(and(or(greatThan(4,5),greatThan(5,4)),equalsTo(3,4)));
 		System.out.println(booleanExpresion + " = " + booleanExpresion.eval());
 	}
+	
 }

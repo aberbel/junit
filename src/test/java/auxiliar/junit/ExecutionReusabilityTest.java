@@ -36,24 +36,24 @@ public class ExecutionReusabilityTest {
 	}
 	
 	@Test
-	public void test1(){
+	public void testA(){
 		staticMember++;
 		instanceMember++;
-		System.out.println("test 1: " + staticMember + " and " +  instanceMember);
+		System.out.println("test A: " + staticMember + " and " +  instanceMember);
 	}
 	
 	@Test
-	public void test2(){
+	public void testB(){
 		staticMember++;
 		instanceMember++;
-		System.out.println("test 2: " + staticMember + " and " +  instanceMember);
+		System.out.println("test B: " + staticMember + " and " +  instanceMember);
 	}
 	
 	@Test
-	public void test3(){
+	public void testC(){
 		staticMember++;
 		instanceMember++;
-		System.out.println("test 3: " + staticMember + " and " +  instanceMember);
+		System.out.println("test C: " + staticMember + " and " +  instanceMember);
 	}
 	
 	@After
@@ -68,6 +68,5 @@ public class ExecutionReusabilityTest {
 		staticMember++;
 		System.out.println("after class: " + staticMember);
 	}
-	
 	
 }

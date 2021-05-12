@@ -2,6 +2,7 @@ package auxiliar.junit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertNotNull;
@@ -123,9 +124,9 @@ public class AssertExample {
 		assertArrayEquals(expectedXArray, resultXArray);
 	}
 	
-//	public void exampleFail(){
-//		fail("should abort");
-//	}
+	public void exampleFail(){
+		fail("should abort");
+	}
 	
 	public static void main(String[] args){
 		AssertExample assertExample = new AssertExample();
@@ -137,7 +138,7 @@ public class AssertExample {
 		assertExample.exampleAssertNull();
 		assertExample.exampleAssertNotNull();
 		assertExample.exampleAssertArrayEquals();
-//		assertExample.exampleFail();
+		assertExample.exampleFail();
 	}
 	
 }

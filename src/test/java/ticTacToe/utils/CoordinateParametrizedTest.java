@@ -13,12 +13,9 @@ import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
 public class CoordinateParametrizedTest {
-
 	private int OUTRow;
 	private int OUTColumn;
-
 	private Coordinate coordinate;
-
 	private boolean expectedInRow;
 	private boolean expectedInColumn;
 	private boolean expectedInMainDiagonal;
@@ -33,15 +30,13 @@ public class CoordinateParametrizedTest {
 		});
 	}
 
-	public CoordinateParametrizedTest(int OUTRow, int OUTColumn, // OUT
+	public CoordinateParametrizedTest(int OUTRow, int OUTColumn, // OUT 
 			Coordinate coordinate, // arguments
 			boolean expectedInRow, boolean expectedInColumn, boolean expectedInMainDiagonal,
 			Direction expectedDirection) {
 		this.OUTRow = OUTRow;
 		this.OUTColumn = OUTColumn;
-
 		this.coordinate = coordinate;
-
 		this.expectedInRow = expectedInRow;
 		this.expectedInColumn = expectedInColumn;
 		this.expectedInMainDiagonal = expectedInMainDiagonal;
