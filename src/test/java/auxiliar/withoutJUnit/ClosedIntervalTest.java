@@ -15,9 +15,11 @@ public class ClosedIntervalTest {
 	}
 
 	public void testShift() throws Exception {
-		ClosedInterval closedInterval = new ClosedInterval(3, 10);
+		int min = 3;
+		int max = 10;
+		ClosedInterval closedInterval = new ClosedInterval(min, max);
+		ClosedInterval resultClosedInterval = new ClosedInterval(min, max);
 		int value = 5;
-		ClosedInterval resultClosedInterval = new ClosedInterval(3, 10);
 		resultClosedInterval.shift(value);
 		ClosedInterval expectedClosedInterval = new ClosedInterval(8, 15);
 		if (!resultClosedInterval.equals(expectedClosedInterval)) {

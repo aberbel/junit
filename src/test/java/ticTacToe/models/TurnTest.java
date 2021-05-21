@@ -9,7 +9,7 @@ public class TurnTest {
 	@Test
 	public void testTurn() {
 		// arrange
-		Turn OUTTurn = new Turn();;
+		Turn OUTTurn = new Turn();
 		// act
 		Color resultColor = OUTTurn.take();
 		// assertions

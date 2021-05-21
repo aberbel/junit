@@ -8,7 +8,7 @@ public class CoordenateTest {
 		Coordinate coordinateLeft = new Coordinate(1, 1);
 		Coordinate coordinateRight = new Coordinate(2, 3);
 		boolean resultInRow = coordinateLeft.inRow(coordinateRight);
-		boolean expectedInRow = false;
+		boolean expectedInRow = true;
 		if (expectedInRow != resultInRow) {
 			throw new Exception("Con " + coordinateLeft + " y " + coordinateRight
 					+ " esperaba " + expectedInRow + " pero fue " + resultInRow);

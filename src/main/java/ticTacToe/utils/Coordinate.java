@@ -1,7 +1,6 @@
 package ticTacToe.utils;
 
 public class Coordinate {
-
 	private int row;
 	private int column;
 	
@@ -15,6 +14,7 @@ public class Coordinate {
 	
 	public Direction direction(Coordinate coordinate){
 		assert coordinate != null;
+
 		assert !this.equals(coordinate);
 		if (this.inRow(coordinate)){
 			return Direction.HORIZONTAL;

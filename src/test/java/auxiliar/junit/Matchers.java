@@ -145,12 +145,11 @@ public class Matchers {
 
 	public static void main(String[] arg){
 		BooleanExpresion booleanExpresion =
-				new Not(
 					new And(
 						new Or(
 							new GreatThan(4,5),
 							new GreatThan(5,4)),
-						new EqualsTo(3,4)));
+						new EqualsTo(3,4));
 		System.out.println(booleanExpresion + " = " + booleanExpresion.eval());
 	}
 }

@@ -2,11 +2,11 @@ package auxiliar.withoutJUnit;
 
 public class ClazzExample {
 
-	@AnnotationExample
+	
 	public void method1(){
 		System.out.println("method1 invoked");
 	}
-	
+	@AnnotationExample
 	public void method2(){
 		System.out.println("method2 invoked");
 	}
