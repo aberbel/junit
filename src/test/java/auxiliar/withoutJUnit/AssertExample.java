@@ -3,7 +3,6 @@ package auxiliar.withoutJUnit;
 public class AssertExample {
 
 	public static void main(String[] args){
-		
 		System.out.println(factorial(0));
 		System.out.println(factorial(3));
 		System.out.println(factorial(21));

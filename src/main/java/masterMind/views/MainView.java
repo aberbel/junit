@@ -6,9 +6,7 @@ import masterMind.utils.IO;
 import masterMind.utils.LimitedIntDialog;
 
 public class MainView {
-
 	private LimitsPresenter limitsPresenter;
-
 	private GamePresenter gamePresenter;
 
 	public MainView(LimitsPresenter limitsPresenter, GamePresenter gamePresenter) {
@@ -19,30 +17,30 @@ public class MainView {
 	}
 
 	private void setLimits() {
-		limitsPresenter.setCombinationLength(new LimitedIntDialog(
+		this.limitsPresenter.setCombinationLength(new LimitedIntDialog(
 				"Longitud de las combinaciones", limitsPresenter
 						.getCombinationLengthClosedInterval()).read());
-		limitsPresenter.setCombinationColors(new LimitedIntDialog(
+		this.limitsPresenter.setCombinationColors(new LimitedIntDialog(
 				"Colores de las combinaciones", limitsPresenter
 						.getCombinationColorsClosedInterval()).read());
-		limitsPresenter.apply();
+		this.limitsPresenter.apply();
 	}
 
 	private void playGame() {
-		gamePresenter.reset();
+		this.gamePresenter.reset();
 		String[] secretColors;
 		do {
-			secretColors = gamePresenter.getSecretColors();
+			secretColors = this.gamePresenter.getSecretColors();
 			this.println(secretColors);
-			String[][] combinationColors = gamePresenter.getCombinationColors();
-			int[][] results = gamePresenter.getResults();
+			String[][] combinationColors = this.gamePresenter.getCombinationColors();
+			int[][] results = this.gamePresenter.getResults();
 			this.println(combinationColors, results);
-			String[] proposalColors = this.readln(secretColors.length, gamePresenter.getColors());
-			gamePresenter.setProposalColors(proposalColors);
-		} while (!gamePresenter.isGameOver());
+			String[] proposalColors = this.readln(secretColors.length, this.gamePresenter.getColors());
+			this.gamePresenter.setProposalColors(proposalColors);
+		} while (!this.gamePresenter.isGameOver());
 		this.println(secretColors);
-		String[][] combinationColors = gamePresenter.getCombinationColors();
-		int[][] results = gamePresenter.getResults();
+		String[][] combinationColors = this.gamePresenter.getCombinationColors();
+		int[][] results = this.gamePresenter.getResults();
 		this.println(combinationColors, results);
 		System.out.println("Conseguido en " + combinationColors.length + " intentos");
 		

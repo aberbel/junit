@@ -35,13 +35,13 @@ public class DecisionTreeBoardTest {
 				assertEquals(expected[i], in.readLine());
 			}
 		} catch (IOException ex) {
-			System.out.println("IOException al leer: " + ex.getMessage());
+			fail("IOException al leer: " + ex.getMessage());
 		} finally {
 			if (in != null) {
 				try {
 					in.close();
 				} catch (IOException ex) {
-					System.out.println("IOException al cerrar: " + ex.getMessage());
+					fail("IOException al cerrar: " + ex.getMessage());
 				}
 			}
 		}
@@ -52,15 +52,15 @@ public class DecisionTreeBoardTest {
 	public void testRead() {
 		board = new DecisionTreeBoard();
 		board.readFile("pruebaLectura");
-		assertEquals(Color.NONE, board.getColor(new Coordinate(0,0)));
+		assertEquals(Color.XS, board.getColor(new Coordinate(0,0)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(0,1)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(0,2)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(1,0)));
-		assertEquals(Color.NONE, board.getColor(new Coordinate(1,1)));
+		assertEquals(Color.XS, board.getColor(new Coordinate(1,1)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(1,2)));
 		assertEquals(Color.NONE, board.getColor(new Coordinate(2,0)));
-		assertEquals(Color.NONE, board.getColor(new Coordinate(2,1)));
-		assertEquals(Color.NONE, board.getColor(new Coordinate(2,2)));
+		assertEquals(Color.OS, board.getColor(new Coordinate(2,1)));
+		assertEquals(Color.OS, board.getColor(new Coordinate(2,2)));
 	}
 
 }
